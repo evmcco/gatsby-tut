@@ -10,6 +10,7 @@ const NavStyles = styled.nav`
   }
   ul {
     margin: 0;
+    margin-top: -6rem;
     padding: 0;
     text-align: center;
     list-style: none;
@@ -41,6 +42,9 @@ const NavStyles = styled.nav`
     &:hover {
       color: var(--red);
     }
+    /* &[aria-current="page"] {
+      color: var(--red)
+    } */
   }
 `;
 
