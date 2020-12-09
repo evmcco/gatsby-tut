@@ -1,15 +1,16 @@
-import { MdLocalPizza as icon } from 'react-icons/md'
+import { MdLocalPizza as icon } from 'react-icons/md';
+
 export default {
   name: 'pizza',
   title: 'pizzas',
   type: 'document',
-  icon: icon,
+  icon,
   fields: [
     {
       name: 'name',
       title: 'PizzaName',
       type: 'string',
-      description: 'Name of the pizza'
+      description: 'Name of the pizza',
     },
     {
       name: 'slug',
@@ -17,23 +18,23 @@ export default {
       type: 'slug',
       options: {
         source: 'name',
-        maxLength: 100
-      }
+        maxLength: 100,
+      },
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
       options: {
-        hotspot: true
-      }    
+        hotspot: true,
+      },
     },
     {
       name: 'price',
       title: 'Price',
       type: 'number',
       description: 'Price of the pizza in cents',
-      validation: Rule => Rule.min(1000).max(50000)
-    }
-  ]
+      validation: (Rule) => Rule.min(1000).max(50000),
+    },
+  ],
 };
